@@ -38,14 +38,14 @@ public class CustomerBase {
 		return customer.getFirstName()==firstName && isSameLastName(lastName, customer);
 	}
 
-//	public List<Customer> findByCreditGreaterThan(int credit) {
-//		List<Customer> result = new ArrayList<Customer>();
-//		for (Customer customer : customers) {
-//			if (customer.getCredit() > credit) {
-//				result.add(customer);
-//			}
-//		}
-//		return result;
-//	}
+	public List<Customer> findByCreditGreaterThan(int credit) {
+		List<Customer> result = new ArrayList<Customer>();
+		for (Customer customer : customers) {
+			if (customer.getCredit() > credit) {
+				result.add(customer);
+			}
+		}
+		return result;
+	}
 
 }
