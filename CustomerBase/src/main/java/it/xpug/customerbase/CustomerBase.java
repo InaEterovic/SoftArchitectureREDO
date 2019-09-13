@@ -16,9 +16,8 @@ public class CustomerBase {
 	public List<Customer> findByLastName(String lastName) {
 		List<Customer> result = new ArrayList<Customer>();
 		for (Customer customer : customers) {
-			if (customer.getLastName().equals(lastName)) {
+			if (customer.getLastName()==lastName) 
 				result.add(customer);
-			}
 		}
 		return result;
 	}
@@ -26,9 +25,8 @@ public class CustomerBase {
 	public List<Customer> findByFirstAndLastName(String firstName, String lastName) {
 		List<Customer> result = new ArrayList<Customer>();
 		for (Customer customer : customers) {
-			if (customer.getFirstName().equals(firstName) && customer.getLastName().equals(lastName) ) {
-				result.add(customer);
-			}
+			if (customer.getFirstName()==firstName && customer.getLastName()==lastName )
+				result.add(customer);			
 		}
 		return result;
 	}
@@ -36,7 +34,7 @@ public class CustomerBase {
 //	public List<Customer> findByCreditGreaterThan(int credit) {
 //		List<Customer> result = new ArrayList<Customer>();
 //		for (Customer customer : customers) {
-//			if (customer.credit() > credit) {
+//			if (customer.getCredit() > credit) {
 //				result.add(customer);
 //			}
 //		}
