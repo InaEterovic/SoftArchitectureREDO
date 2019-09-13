@@ -17,15 +17,15 @@ public class Customer {
 		return String.format("(Customer %s %s)", firstName, lastName);
 	}
 
-	public String lastName() {
+	public String getLastName() {
 		return lastName;
 	}
 
-	public String firstName() {
+	public String getFirstName() {
 		return firstName;
 	}
 
-	public int credit() {
+	public int getCredit() {
 		return credit;
 	}
 

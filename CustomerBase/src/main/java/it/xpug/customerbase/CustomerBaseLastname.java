@@ -13,7 +13,7 @@ public class CustomerBaseLastname extends CustomerBase{
 		System.out.print(credit);
 		List<Customer> result = new ArrayList<Customer>();
 		for (Customer customer : customers) {
-			if (customer.credit() > credit) {
+			if (customer.getCredit() > credit) {
 				result.add(customer);
 			}
 		}

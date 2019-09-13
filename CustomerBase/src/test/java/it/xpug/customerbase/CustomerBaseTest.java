@@ -40,12 +40,12 @@ public class CustomerBaseTest {
 		assertThat(found, is(asList(alice)));
 	}
 
-	@Test
-	public void findWithCreditGreaterThan() throws Exception {
-		
-		List<Customer> found = customerBase.findBy();
-		assertThat(found, is(asList(charlie)));
-	}
+//	@Test
+//	public void findWithCreditGreaterThan() throws Exception {
+//		
+//		List<Customer> found = customerBase.findBy();
+//		assertThat(found, is(asList(charlie)));
+//	}
 
 	//TODO:
 	@Test
