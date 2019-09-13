@@ -16,19 +16,26 @@ public class CustomerBase {
 	public List<Customer> findByLastName(String lastName) {
 		List<Customer> result = new ArrayList<Customer>();
 		for (Customer customer : customers) {
-			if (customer.getLastName()==lastName) 
+			if (isSameLastName(lastName, customer)) 
 				result.add(customer);
 		}
 		return result;
 	}
 
+	private boolean isSameLastName(String lastName, Customer customer) {
+		return customer.getLastName()==lastName;
+	}
+
 	public List<Customer> findByFirstAndLastName(String firstName, String lastName) {
 		List<Customer> result = new ArrayList<Customer>();
 		for (Customer customer : customers) {
-			if (customer.getFirstName()==firstName && customer.getLastName()==lastName )
+			if (isSameFullName(firstName, lastName, customer) )
 				result.add(customer);			
 		}
 		return result;
+	}
+	private boolean isSameFullName(String firstName, String lastName, Customer customer) {
+		return customer.getFirstName()==firstName && isSameLastName(lastName, customer);
 	}
 
 //	public List<Customer> findByCreditGreaterThan(int credit) {
